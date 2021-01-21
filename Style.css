@@ -1,0 +1,358 @@
+body {
+    margin: 0;
+    background: rgba(12, 11, 49, 0.7);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Mabry Pro Bold";
+    src: url("fonts/Mabry Pro Bold.otf") format("sans-serif");
+}
+
+@font-face {
+    font-family: "Mabry Pro Black Italic";
+    src: url("fonts/Mabry\ Pro\ Black\ Italic.otf") format("truetype");
+}
+@font-face {
+    font-family: "Mabry Pro Black";
+    src: url("fonts/Mabry\ Pro\ Black.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Mabry Pro Light";
+    src: url("fonts/Mabry\ Pro\ Light.otf") format("truetype");
+}
+
+#i1{
+    position: absolute;
+    top: -235px;
+    left: -182px;
+}
+#i2 {
+    position: absolute;
+    left: 332px;
+    top: 260px;
+}
+#i3 {
+    position: absolute;
+    top: 956px;
+    left: -123px;
+}
+
+.popap{
+    width: 720px;
+    height: 1480px;
+    background: #3D3C5A;
+    margin: 80px auto;
+    border-radius: 16px;
+    position: relative;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    color: white;
+    font-family: "Mabry Pro Black","truetype";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 900;
+    margin: 39px 0 23px 81px;
+}
+.btn-head {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 40px 40px;
+}
+.top-form>input {
+    display: grid;
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+    opacity: 0.3;
+    width: 560px;
+    Height: 32px;
+    margin: 30px 80px;
+    font-size: 24px;
+    color: #FFFFFF;
+    opacity: 0.5;
+    font-family: "Mabry Pro Light", "truetype";
+    
+}
+.cities {
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+    opacity: 0.3;
+    width: 560px;
+    Height: 32px;
+    margin: 30px 80px;
+    font-size: 24px;
+    color: #FFFFFF;
+    opacity: 0.5;
+    font-family: "Mabry Pro Light",
+    "truetype";
+}
+.autocomplete {
+    position: relative;
+    display: inline-block;
+}
+
+.autocomplete-items {
+    position: absolute;
+   /* border: 1px solid #d4d4d4;*/
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    top: 100%;
+    left: 78px;
+    right: 0;
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+
+.autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+}
+
+
+.middle-form{
+    display: grid;
+    font-size: 24px;
+    color: #FFFFFF;
+    font-family: "Mabry Pro Light","truetype";
+    padding: 53px 0 0 72px;
+}
+
+
+.bottom-form{
+    padding: 53px 0 0 72px;
+    display: grid;
+    font-size: 25px;
+    color: white;
+    font-family: "Mabry Pro Light","truetype";
+}
+
+
+.radio{
+    opacity: 0.5;
+    margin-top: 15px;
+}
+.radio input {
+    display: none;
+}
+
+.radio span {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #ff7777;
+    margin-right: 10px;
+}
+
+.radio input:checked+span {
+    background: #ff7777;
+    box-shadow: 0 0 4px 2px #ff6c6c;
+    
+}
+
+
+.radio input:checked+span::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 6.5px;
+    background: #fff;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+
+.checkbox {
+    opacity: 0.5;
+    margin-top: 15px;
+}
+
+.checkbox input {
+    display: none;
+}
+
+.checkbox span {
+    
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid #ff7777;
+    margin-right: 20px;
+}
+
+.checkbox input:checked+span {
+    background: #ff7777;
+    box-shadow: 0 0 7px 3px #ff6c6c;
+    content: url(images/icon.png);
+}
+
+
+
+.accept{
+    padding: 28px 0 0px 78px;
+    font-size: 16px;
+    color: white;
+}
+
+#accept {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+#accept+label {
+    position: relative;
+    padding-left: 50px;
+    cursor: pointer;
+}
+
+#accept+label:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -2px;
+    width: 40px;
+    height: 20px;
+    border-radius: 15px;
+    border: 1px solid #FF7777;
+}
+
+#accept+label:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 15px;
+    background: #FF7777;
+    transition: .2s;
+}
+
+#accept:checked+label:after {
+    background: #FF7777;
+    left: 20px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 115px;
+}
+button {
+    width: 200px;
+    height: 58px;
+    font-size: 24px;
+    color: #3D3C5A;
+    opacity: 0.3;
+    font-family: "Mabry Pro Light","truetype";
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+button:active {
+    background: #FF7777;
+    border: 1px solid #FF7777;
+    opacity: 1;
+    box-shadow: 0 0 7px 3px #ff6c6c;
+    outline: none;
+    color: #fff;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+   
+  
+}
+
+
+
+.custom-radio+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #f83a3a;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.slidecontainer {
+    width: 100%;
+    padding-left: 68px;
+}
+.slidecontainer>p {
+    font-size: 25px;
+    color: white;
+    font-family: "Mabry Pro Light","truetype";
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 2px;
+    border-radius: 5px;
+    background: #ffffff;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: #FF7777;
+    cursor: pointer;
+    box-shadow: 0 0 2px 2px #FF7777;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+
