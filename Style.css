@@ -29,17 +29,17 @@ body {
 #i1{
     position: absolute;
     top: -235px;
-    left: -182px;
+    left: 0px;
 }
 #i2 {
     position: absolute;
-    left: 332px;
+    left: 500px;
     top: 260px;
 }
 #i3 {
     position: absolute;
-    top: 956px;
-    left: -123px;
+    top: 1000px;
+    left: 35px;
 }
 
 .popap{
